@@ -10,6 +10,11 @@ def get_activity_data(access_token, params) -> dict:
 
     # Getting the data and storing it in a json file
     response = requests.get(ACTIVITY_ENDPOINT, headers=headers, params=params)
-    activity_data = response.json
+    status_code = response.status_code
+    if status_code == 200:
+        print('Sucess')
+    else:
+        print(f'Failure - Status code: {status_code}')
+    activity_data = response.json()
 
     return activity_data
