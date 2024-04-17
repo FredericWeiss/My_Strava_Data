@@ -6,7 +6,7 @@ from datetime import datetime
 import json
 
 ACTIVITIES_PER_PAGE = 200
-PAGE_NUMBER = 1
+PAGE_NUMBER = 31
 PARAMS = {
     'per_page': ACTIVITIES_PER_PAGE,
     'page': PAGE_NUMBER
